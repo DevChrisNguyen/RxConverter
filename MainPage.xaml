@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RxConverter.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+
+            <Label
+                Text="Enter RX to be Converted"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <NumerticEntry>
+                
+            </NumerticEntry>
+
+            <Button
+                x:Name="ConvertBtn"
+                Text="Convert Rx" 
+                SemanticProperties.Hint="Converts Rx notation"
+                Clicked="OnConvertClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
