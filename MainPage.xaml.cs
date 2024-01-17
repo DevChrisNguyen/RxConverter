@@ -15,19 +15,23 @@
 
         private void OnConvertClicked(object sender, EventArgs e)
         {
-            double rSphereInput = Double.Parse(RightSphere.Text);
-            double rCylInput = Double.Parse(RightCyl.Text);
-            int rAxisInput = Int32.Parse(RightAxis.Text);
-            double lSphereInput = Double.Parse(LeftSphere.Text);
-            double lCylInput = Double.Parse(LeftCyl.Text);
-            int lAxisInput = Int32.Parse(LeftAxis.Text);
+            double rSphereInput = double.Parse(RightSphere.Text);
+            double rCylInput = double.Parse(RightCyl.Text);
+            int rAxisInput = int.Parse(RightAxis.Text);
+            double lSphereInput = double.Parse(LeftSphere.Text);
+            double lCylInput = double.Parse(LeftCyl.Text);
+            int lAxisInput = int.Parse(LeftAxis.Text);
 
             initialRx = new EyeRx(rSphereInput, rCylInput, rAxisInput, lSphereInput, lCylInput,lAxisInput );
 
             result = ConvertCylinderNotation(initialRx);
 
-            ResultSphereR.Text = "Something else";
-
+            ResultSphereR.Text = result.rightSphere.ToString();
+            ResultCylR.Text = result.rightCyl.ToString();
+            ResultAxisR.Text = result.rightAxis.ToString();
+            ResultSphereL.Text = result.leftSphere.ToString();
+            ResultCylL.Text = result.leftCyl.ToString();
+            ResultAxisL.Text = result.leftAxis.ToString();
 
         }
 

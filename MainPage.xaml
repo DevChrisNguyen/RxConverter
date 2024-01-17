@@ -7,14 +7,9 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-
-
-            <Label
-                Text="Enter RX to be Converted"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level3" />
             <HorizontalStackLayout
-                Spacing="20">
+                HorizontalOptions="CenterAndExpand"
+                Spacing="20" >
                 <Label Text="OD:"/>
                 <Entry
                     x:Name="RightSphere"
@@ -38,6 +33,7 @@
 
             </HorizontalStackLayout>
             <HorizontalStackLayout
+                 HorizontalOptions="CenterAndExpand"
                  Spacing="20">
                 <Label Text="OS:"/>
                 <Entry
@@ -67,12 +63,14 @@
                 Text="Convert Rx" 
                 SemanticProperties.Hint="Converts Rx notation"
                 Clicked="OnConvertClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Center"
+                />
 
             <Label
-                Text="Converted Rx:"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level3" />
+                Text="Converted RX"
+                FontSize="Subtitle"
+               
+                 />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
@@ -106,21 +104,24 @@
                        Text="OD"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />  
-                <Label Grid.Row="1"
+                <Entry Grid.Row="1"
                        Grid.Column="1"
-                       Text="Right Sph"
+                       Placeholder="x"
+                       IsEnabled="False"
                        x:Name="ResultSphereR"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-                <Label Grid.Row="1"
+                <Entry Grid.Row="1"
                        Grid.Column="2"
-                       Text="Right Cyl"
+                       Placeholder="x"
+                       IsEnabled="False"
                        x:Name="ResultCylR"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-                <Label Grid.Row="1"
+                <Entry Grid.Row="1"
                        Grid.Column="3"
-                       Text="Right Axis"
+                       Placeholder="x"
+                       IsEnabled="False"
                        x:Name="ResultAxisR"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
@@ -133,19 +134,25 @@
                        Text="OS"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-                <Label Grid.Row="2"
+                <Entry Grid.Row="2"
                        Grid.Column="1"
-                       Text="Left Sphere"
+                       Placeholder="x"
+                       IsEnabled="False"
+                       x:Name="ResultSphereL"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-                <Label Grid.Row="2"
+                <Entry Grid.Row="2"
                        Grid.Column="2"
-                       Text="Left Cyl"
+                       Placeholder="x"
+                       IsEnabled="False"
+                       x:Name="ResultCylL"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-                <Label Grid.Row="2"
+                <Entry Grid.Row="2"
                        Grid.Column="3"
-                       Text="Left Axis"
+                       Placeholder="x"
+                       IsEnabled="False"
+                       x:Name="ResultAxisL"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
             </Grid>

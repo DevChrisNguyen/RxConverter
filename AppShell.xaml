@@ -8,7 +8,7 @@
     Title="RxConverter">
 
     <ShellContent
-        Title="Eye Rx Converter"
+        Title="Rx Cyl Converter"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
