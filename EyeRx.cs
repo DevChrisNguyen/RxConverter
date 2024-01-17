@@ -8,8 +8,12 @@ namespace RxConverter
 {
     public class EyeRx
     {
-        double rightSphere, rightCyl, leftSphere, leftCyl;
-        int rightAxis, leftAxis;
+        public double rightSphere { get; set;}
+        public double rightCyl { get; set; }
+        public double leftSphere { get; set; }
+        public double leftCyl { get; set; }
+        public int rightAxis { get; set; }
+        public int leftAxis { get; set; }
 
         public EyeRx() { }
         public EyeRx(double rSphere, double rCyl, int rAxis,
@@ -24,5 +28,6 @@ namespace RxConverter
         
         }
 
+        
     }
 }

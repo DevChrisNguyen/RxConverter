@@ -12,10 +12,55 @@
             <Label
                 Text="Enter RX to be Converted"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-            <NumerticEntry>
-                
-            </NumerticEntry>
+                SemanticProperties.HeadingLevel="Level3" />
+            <HorizontalStackLayout
+                Spacing="20">
+                <Label Text="OD:"/>
+                <Entry
+                    x:Name="RightSphere"
+                    Placeholder="Sph"
+                    Keyboard="Numeric"
+                    MaxLength="6"
+                    IsTextPredictionEnabled="False"/>
+                <Entry
+                    x:Name="RightCyl"
+                    Placeholder="Cyl"
+                    Keyboard="Numeric"
+                    MaxLength="6"
+                    IsTextPredictionEnabled="False"/>
+
+                <Entry
+                    x:Name="RightAxis"
+                    Placeholder="Axis"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    IsTextPredictionEnabled="False"/>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Spacing="20">
+                <Label Text="OS:"/>
+                <Entry
+                    x:Name="LeftSphere"
+                    Placeholder="Sph"
+                    Keyboard="Numeric"
+                    MaxLength="6"
+                    IsTextPredictionEnabled="False"/>
+                <Entry
+                    x:Name="LeftCyl"
+                    Placeholder="Cyl"
+                    Keyboard="Numeric"
+                    MaxLength="6"
+                    IsTextPredictionEnabled="False"/>       
+
+                <Entry
+                    x:Name="LeftAxis"
+                    Placeholder="Axis"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    IsTextPredictionEnabled="False"/>
+
+            </HorizontalStackLayout>
 
             <Button
                 x:Name="ConvertBtn"
@@ -23,7 +68,87 @@
                 SemanticProperties.Hint="Converts Rx notation"
                 Clicked="OnConvertClicked"
                 HorizontalOptions="Fill" />
+
+            <Label
+                Text="Converted Rx:"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level3" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Text=""
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="SPH"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="2"
+                       Text="CYL"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="3"
+                       Text="AXIS"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                
+                
+                <Label Grid.Row="1"
+                       Text="OD"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />  
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="Right Sph"
+                       x:Name="ResultSphereR"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                       Text="Right Cyl"
+                       x:Name="ResultCylR"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="1"
+                       Grid.Column="3"
+                       Text="Right Axis"
+                       x:Name="ResultAxisR"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+
+
+
+                <Label Grid.Row="2"
+                       Grid.ColumnSpan="1"
+                       Text="OS"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Left Sphere"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="2"
+                       Grid.Column="2"
+                       Text="Left Cyl"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="2"
+                       Grid.Column="3"
+                       Text="Left Axis"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
