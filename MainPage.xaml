@@ -7,56 +7,99 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <HorizontalStackLayout
-                HorizontalOptions="CenterAndExpand"
-                Spacing="20" >
-                <Label Text="OD:"/>
-                <Entry
-                    x:Name="RightSphere"
-                    Placeholder="Sph"
-                    Keyboard="Numeric"
-                    MaxLength="6"
-                    IsTextPredictionEnabled="False"/>
-                <Entry
-                    x:Name="RightCyl"
-                    Placeholder="Cyl"
-                    Keyboard="Numeric"
-                    MaxLength="6"
-                    IsTextPredictionEnabled="False"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Text=""
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="SPH"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="2"
+                       Text="CYL"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="3"
+                       Text="AXIS"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
 
-                <Entry
-                    x:Name="RightAxis"
-                    Placeholder="Axis"
-                    Keyboard="Numeric"
-                    MaxLength="3"
-                    IsTextPredictionEnabled="False"/>
 
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
-                 HorizontalOptions="CenterAndExpand"
-                 Spacing="20">
-                <Label Text="OS:"/>
-                <Entry
-                    x:Name="LeftSphere"
-                    Placeholder="Sph"
-                    Keyboard="Numeric"
-                    MaxLength="6"
-                    IsTextPredictionEnabled="False"/>
-                <Entry
-                    x:Name="LeftCyl"
-                    Placeholder="Cyl"
-                    Keyboard="Numeric"
-                    MaxLength="6"
-                    IsTextPredictionEnabled="False"/>       
+                <Label Grid.Row="1"
+                       Text="OD:"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Placeholder="SPH"
+                       Text=""
+                       x:Name="RightSphere"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="1"
+                       Grid.Column="2"
+                       Placeholder="CYL"
+                       Text=""
+                       x:Name="RightCyl"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="1"
+                       Grid.Column="3"
+                       Placeholder="AXIS"
+                       Text=""
+                       x:Name="RightAxis"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
 
-                <Entry
-                    x:Name="LeftAxis"
-                    Placeholder="Axis"
-                    Keyboard="Numeric"
-                    MaxLength="3"
-                    IsTextPredictionEnabled="False"/>
 
-            </HorizontalStackLayout>
+
+
+                <Label Grid.Row="2"
+                       Grid.ColumnSpan="1"
+                       Text="OS:"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="2"
+                       Grid.Column="1"
+                       Placeholder="SPH"
+                       Text=""
+                       x:Name="LeftSphere"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="2"
+                       Grid.Column="2"
+                       Placeholder="CYL"
+                       Text=""
+                       x:Name="LeftCyl"
+                       Keyboard="Numeric"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Entry Grid.Row="2"
+                       Grid.Column="3"
+                       Placeholder="AXIS"
+                       Text=""
+                       x:Name="LeftAxis"
+                       Keyboard="Numeric"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+            
 
             <Button
                 x:Name="ConvertBtn"
@@ -68,7 +111,8 @@
 
             <Label
                 Text="Converted RX"
-                FontSize="Subtitle"
+                FontSize="20"
+                FontAttributes="Bold"
                
                  />
             <Grid>
@@ -101,28 +145,31 @@
                 
                 
                 <Label Grid.Row="1"
-                       Text="OD"
+                       Text="OD:"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />  
                 <Entry Grid.Row="1"
                        Grid.Column="1"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultSphereR"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="1"
                        Grid.Column="2"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultCylR"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="1"
                        Grid.Column="3"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultAxisR"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
 
@@ -131,31 +178,43 @@
 
                 <Label Grid.Row="2"
                        Grid.ColumnSpan="1"
-                       Text="OS"
+                       Text="OS:"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="2"
                        Grid.Column="1"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultSphereL"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="2"
                        Grid.Column="2"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultCylL"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="2"
                        Grid.Column="3"
                        Placeholder="x"
-                       IsEnabled="False"
+                       IsReadOnly="True"
                        x:Name="ResultAxisL"
+                       FontAttributes="Bold"
+                       TextColor="Black"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
             </Grid>
+            <Button
+                x:Name="ClearBtn"
+                Text="Clear" 
+                SemanticProperties.Hint="Clears Entries"
+                Clicked="OnClearClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="DarkRed"
+            />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
