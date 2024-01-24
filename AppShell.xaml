@@ -6,10 +6,7 @@
     xmlns:local="clr-namespace:RxConverter"
     Shell.FlyoutBehavior="Disabled"
     Title="RxConverter">
-
     <ShellContent
-        Title="Rx Cyl Converter"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
 </Shell>

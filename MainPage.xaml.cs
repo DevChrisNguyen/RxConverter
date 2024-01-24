@@ -7,17 +7,13 @@ namespace RxConverter
     {
         EyeRx initialRx;
         EyeRx result;
-
         public MainPage()
         {
             InitializeComponent();
             initialRx = new EyeRx();
             result = new EyeRx();
-
         }
-
         private async void OnConvertClicked(object sender, EventArgs e)
-
         {
             double rSphereInput;
             double rCylInput;
@@ -27,7 +23,7 @@ namespace RxConverter
             int lAxisInput;
             
             if (RightSphere.Text == String.Empty) {
-                await DisplayAlert("Alert", "Right Sphere Must be Entered! (Enter 0 for No SPH)", "Eye, eye Capt'n");
+                await DisplayAlert("Alert", "Right Sphere Must be Entered! (Enter 0 for No SPH)", "Eye, eye, Capt'n");
                 return;
             }
             else {
@@ -35,13 +31,13 @@ namespace RxConverter
                 }
             if (RightCyl.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Right Cyl was not Entered! (Enter 0 for No CYL)", "Eye, eye Capt'n");
+                await DisplayAlert("Alert", "Right Cyl was not Entered! (Enter 0 for No CYL)", "Eye, eye, Capt'n");
                 return;
             }
             else { rCylInput = double.Parse(RightCyl.Text); }
             if (RightAxis.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Right Axis is missing! (Enter 0 for No Axis)", "Eye, eye Capt'n");
+                await DisplayAlert("Alert", "Right Axis is missing! (Enter 0 for No Axis)", "Eye, eye, Capt'n");
                 return;
             }
             else {
@@ -56,7 +52,7 @@ namespace RxConverter
     }
             if (LeftCyl.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Left Cyl Must be Entered. (Enter 0 for No Cyl", "OK");
+                await DisplayAlert("Alert", "Left Cyl Must be Entered. (Enter 0 for No Cyl)", "OK");
                 return;
             }
             else { lCylInput = double.Parse(LeftCyl.Text); }
@@ -70,7 +66,6 @@ namespace RxConverter
                 lAxisInput = int.Parse(LeftAxis.Text);
             }
 
-
             rCylInput = double.Parse(RightCyl.Text);
             rAxisInput = int.Parse(RightAxis.Text);
             lSphereInput = double.Parse(LeftSphere.Text);
@@ -78,18 +73,14 @@ namespace RxConverter
             lAxisInput = int.Parse(LeftAxis.Text);
 
             initialRx = new EyeRx(rSphereInput, rCylInput, rAxisInput, lSphereInput, lCylInput,lAxisInput );
-
             result = ConvertCylinderNotation(initialRx);
-
-            ResultSphereR.Text = result.rightSphere.ToString();
-            ResultCylR.Text = result.rightCyl.ToString();
-            ResultAxisR.Text = result.rightAxis.ToString();
-            ResultSphereL.Text = result.leftSphere.ToString();
-            ResultCylL.Text = result.leftCyl.ToString();
-            ResultAxisL.Text = result.leftAxis.ToString();
-
+            ResultSphereR.Text = result.rightSphere.ToString("N02");
+            ResultCylR.Text = result.rightCyl.ToString("N02");
+            ResultAxisR.Text = result.rightAxis.ToString("D3");
+            ResultSphereL.Text = result.leftSphere.ToString("N02");
+            ResultCylL.Text = result.leftCyl.ToString("N02");
+            ResultAxisL.Text = result.leftAxis.ToString("D3");
         }
-
         EyeRx ConvertCylinderNotation(EyeRx rx)
         {
             double rSphere;
@@ -99,9 +90,7 @@ namespace RxConverter
             double lCyl;
             int lAxis;
 
-
             rSphere = rx.rightSphere + rx.rightCyl;
-
             if (rx.rightCyl == 0) {
                 rCyl = 0;
             }
@@ -109,7 +98,6 @@ namespace RxConverter
             {
                 rCyl = -1 * rx.rightCyl;
             }
-            
             rAxis = (rx.rightAxis + 90) % 180;
             if (rAxis == 0) {
                 rAxis = 180; 
@@ -124,15 +112,11 @@ namespace RxConverter
             {
                 lCyl = -1 * rx.leftCyl;
             }
-
             lAxis = (rx.leftAxis + 90) % 180;
             if (lAxis == 0)
             {
                 lAxis = 180;
             }
-            
-            
-
             return new EyeRx(rSphere, rCyl, rAxis, lSphere, lCyl,lAxis);
         }
         private void OnClearClicked(Object sender, EventArgs e)
@@ -150,7 +134,5 @@ namespace RxConverter
             ResultCylL.Text = string.Empty;
             ResultAxisL.Text = string.Empty;
         }
-
     }
-
 }

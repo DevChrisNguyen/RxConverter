@@ -14,7 +14,6 @@ namespace RxConverter
         public double leftCyl { get; set; }
         public int rightAxis { get; set; }
         public int leftAxis { get; set; }
-
         public EyeRx() { }
         public EyeRx(double rSphere, double rCyl, int rAxis,
                         double lSphere, double lCyl, int lAxis) 
@@ -27,7 +26,5 @@ namespace RxConverter
             this.leftAxis = lAxis;
         
         }
-
-        
     }
 }
