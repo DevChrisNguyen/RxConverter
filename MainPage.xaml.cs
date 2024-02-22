@@ -23,7 +23,7 @@ namespace RxConverter
             int lAxisInput;
             
             if (RightSphere.Text == String.Empty) {
-                await DisplayAlert("Alert", "Right Sphere Must be Entered! (Enter 0 for No SPH)", "Eye, eye, Capt'n");
+                await DisplayAlert("Error", "Right Sphere Required.", "OK");
                 return;
             }
             else {
@@ -31,20 +31,20 @@ namespace RxConverter
                 }
             if (RightCyl.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Right Cyl was not Entered! (Enter 0 for No CYL)", "Eye, eye, Capt'n");
+                await DisplayAlert("Error", "Right Cyl Required. (Enter 0 if No CYL)", "OK");
                 return;
             }
             else { rCylInput = double.Parse(RightCyl.Text); }
             if (RightAxis.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Right Axis is missing! (Enter 0 for No Axis)", "Eye, eye, Capt'n");
+                await DisplayAlert("Error", "Right Axis Required. (Enter 0 if No Axis)", "OK");
                 return;
             }
             else {
                 rAxisInput = int.Parse(RightAxis.Text);
             }
             if (LeftSphere.Text == String.Empty) { 
-                await DisplayAlert("Alert", "Left Sphere Must be Entered.", "OK");
+                await DisplayAlert("Error", "Left Sphere Required.", "OK");
             return;
             }
             else {
@@ -52,13 +52,13 @@ namespace RxConverter
     }
             if (LeftCyl.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "Left Cyl Must be Entered. (Enter 0 for No Cyl)", "OK");
+                await DisplayAlert("Error", "Left Cyl Required. (Enter 0 if No CYL)", "OK");
                 return;
             }
             else { lCylInput = double.Parse(LeftCyl.Text); }
             if (LeftAxis.Text == String.Empty)
             {
-                await DisplayAlert("Alert", "You forgot the Left Axis! Try again.", "OK");
+                await DisplayAlert("Error", "Left Axis Required. (Enter 0 if No Axis)", "OK");
                 return;
             }
             else

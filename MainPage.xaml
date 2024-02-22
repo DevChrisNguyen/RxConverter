@@ -179,7 +179,7 @@
                 SemanticProperties.Hint="Clears Entries"
                 Clicked="OnClearClicked"
                 HorizontalOptions="Center"
-                BackgroundColor="DarkRed"/>
+                BackgroundColor="#cc0000"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
