@@ -9,7 +9,7 @@
             Margin="0,40,0,0">
             <Label
                 Text="Enter Rx"
-                FontSize="20"
+                FontSize="30"
                 FontAttributes="Bold"/>
             <Grid>
                 <Grid.RowDefinitions>
@@ -27,20 +27,25 @@
                        VerticalOptions="Center" />
                 <Label Grid.Column="1"
                        Text="SPH"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Label Grid.Column="2"
                        Text="CYL"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Label Grid.Column="3"
                        Text="AXIS"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Label Grid.Row="1"
                        Text="OD:"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="1"
                        Grid.Column="1"
                        Placeholder="SPH"
                        Text=""
+                       FontSize="25"
                        x:Name="RightSphere"
                        Keyboard="Numeric"
                        VerticalOptions="Center" 
@@ -49,6 +54,7 @@
                        Grid.Column="2"
                        Placeholder="CYL"
                        Text=""
+                       FontSize="25"
                        x:Name="RightCyl"
                        Keyboard="Numeric"
                        VerticalOptions="Center"
@@ -57,6 +63,7 @@
                        Grid.Column="3"
                        Placeholder="AXIS"
                        Text=""
+                       FontSize="25"
                        x:Name="RightAxis"
                        Keyboard="Numeric"
                        VerticalOptions="Center" 
@@ -64,11 +71,13 @@
                 <Label Grid.Row="2"
                        Grid.ColumnSpan="1"
                        Text="OS:"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="2"
                        Grid.Column="1"
                        Placeholder="SPH"
                        Text=""
+                       FontSize="25"
                        x:Name="LeftSphere"
                        Keyboard="Numeric"
                        VerticalOptions="Center" 
@@ -77,6 +86,7 @@
                        Grid.Column="2"
                        Placeholder="CYL"
                        Text=""
+                       FontSize="25"
                        x:Name="LeftCyl"
                        Keyboard="Numeric"
                        VerticalOptions="Center"
@@ -85,6 +95,7 @@
                        Grid.Column="3"
                        Placeholder="AXIS"
                        Text=""
+                       FontSize="25"
                        x:Name="LeftAxis"
                        Keyboard="Numeric"
                        VerticalOptions="Center" 
@@ -93,17 +104,18 @@
             <Button
                 x:Name="ConvertBtn"
                 Text="Change Cyl Sign" 
+                TextColor="White"
                 SemanticProperties.Hint="Converts Cylinder notation"
                 Clicked="OnConvertClicked"
                 HorizontalOptions="Center"/>
             <Label
                 Text="Converted Rx"
-                FontSize="20"
+                FontSize="30"
                 FontAttributes="Bold"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
-                    <RowDefinition />
+                    <RowDefinition /> 
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -115,20 +127,25 @@
                 <Label Text=""
                        VerticalOptions="Center" />
                 <Label Grid.Column="1"
+                       FontSize="20"
                        Text="SPH"
                        VerticalOptions="Center" />
                 <Label Grid.Column="2"
+                       FontSize="20"
                        Text="CYL"
                        VerticalOptions="Center" />
                 <Label Grid.Column="3"
+                       FontSize="20"
                        Text="AXIS"
                        VerticalOptions="Center" />
                 <Label Grid.Row="1"
                        Text="OD:"
+                       FontSize="20"
                        VerticalOptions="Center" />  
                 <Entry Grid.Row="1"
                        Grid.Column="1"
                        Placeholder="SPH"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultSphereR"
                        FontAttributes="Bold"
@@ -136,6 +153,7 @@
                 <Entry Grid.Row="1"
                        Grid.Column="2"
                        Placeholder="CYL"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultCylR"
                        FontAttributes="Bold"
@@ -143,6 +161,7 @@
                 <Entry Grid.Row="1"
                        Grid.Column="3"
                        Placeholder="AXIS"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultAxisR"
                        FontAttributes="Bold"
@@ -150,10 +169,12 @@
                 <Label Grid.Row="2"
                        Grid.ColumnSpan="1"
                        Text="OS:"
+                       FontSize="20"
                        VerticalOptions="Center" />
                 <Entry Grid.Row="2"
                        Grid.Column="1"
                        Placeholder="SPH"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultSphereL"
                        FontAttributes="Bold"
@@ -161,6 +182,7 @@
                 <Entry Grid.Row="2"
                        Grid.Column="2"
                        Placeholder="CYL"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultCylL"
                        FontAttributes="Bold"
@@ -168,6 +190,7 @@
                 <Entry Grid.Row="2"
                        Grid.Column="3"
                        Placeholder="AXIS"
+                       FontSize="25"
                        IsReadOnly="True"
                        x:Name="ResultAxisL"
                        FontAttributes="Bold"
@@ -176,6 +199,7 @@
             <Button
                 x:Name="ClearBtn"
                 Text="Clear" 
+                TextColor="White"
                 SemanticProperties.Hint="Clears Entries"
                 Clicked="OnClearClicked"
                 HorizontalOptions="Center"
