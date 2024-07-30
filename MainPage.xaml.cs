@@ -66,12 +66,6 @@ namespace RxConverter
                 lAxisInput = int.Parse(LeftAxis.Text);
             }
 
-            rCylInput = double.Parse(RightCyl.Text);
-            rAxisInput = int.Parse(RightAxis.Text);
-            lSphereInput = double.Parse(LeftSphere.Text);
-            lCylInput = double.Parse(LeftCyl.Text);
-            lAxisInput = int.Parse(LeftAxis.Text);
-
             initialRx = new EyeRx(rSphereInput, rCylInput, rAxisInput, lSphereInput, lCylInput,lAxisInput );
             result = ConvertCylinderNotation(initialRx);
             ResultSphereR.Text = result.rightSphere.ToString("N02");
