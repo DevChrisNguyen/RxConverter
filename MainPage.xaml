@@ -116,7 +116,7 @@
                 HorizontalOptions="Center"
                 HeightRequest="55"
                 WidthRequest="55"
-                CornerRadius="5"
+                CornerRadius="6"
                 />
             <Label
                 Text="Converted Rx"
@@ -218,7 +218,7 @@
                 BackgroundColor="#cc0000"
                 HeightRequest="55"
                 WidthRequest="55"
-                CornerRadius="5"/>
+                CornerRadius="6"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
